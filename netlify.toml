@@ -1,0 +1,10 @@
+[build]
+  command = "pnpm run build"
+  publish = "public"  # This is where your static assets go
+  functions = "netlify/functions"  # Netlify will run the SSR function here
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/server"
+  status = 200
+
